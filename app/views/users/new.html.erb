@@ -1,0 +1,38 @@
+<h1>Novo usuário</h1>
+
+<%= render "form", user: @user %>
+
+<br>
+
+<div>
+  <%= link_to "Voltar para usuários", users_path %>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pesquisa de Usuários</title>
+</head>
+<body>
+  <h1>Pesquisa de Usuários</h1>
+
+  <form action="/resultados_pesquisa" method="get">
+    <label for="criteria">Escolha o critério de busca:</label>
+    <select id="criteria" name="criteria">
+      <option value="email">Email</option>
+      <option value="name">Nome</option>
+      <option value="cpf">CPF</option>
+      <option value="phone">Celular</option>
+    </select>
+
+    <br>
+
+    <label for="query">Digite a busca:</label>
+    <input type="text" id="query" name="query" placeholder="Digite a busca">
+
+    <br><br>
+
+    <input type="submit" value="Pesquisar">
+  </form>
+</body>
+</html>
